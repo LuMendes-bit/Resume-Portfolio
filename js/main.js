@@ -1,5 +1,61 @@
 // Função para carregar os dados do currículo
 document.addEventListener('DOMContentLoaded', function() {
+    // Configurar seções colapsáveis
+    const sections = document.querySelectorAll('.section-collapsible');
+    sections.forEach(section => {
+        const header = section.querySelector('.section-header');
+        header.addEventListener('click', () => {
+            section.classList.toggle('active');
+        });
+    });
+
+    // Configurar botão de download
+    document.getElementById('download-cv').addEventListener('click', function() {
+        // Criar um objeto com os dados formatados para PDF
+        const cvData = {
+            nome: dadosCurriculo.pessoal.nome,
+            contato: `${dadosCurriculo.pessoal.email}\n${dadosCurriculo.pessoal.telefone}`,
+            experiencias: dadosCurriculo.experiencias.map(exp => 
+                `${exp.cargo} - ${exp.empresa}\n${exp.periodo}\n${exp.descricao}`
+            ).join('\n\n'),
+            educacao: dadosCurriculo.educacao.map(edu =>
+                `${edu.curso}\n${edu.instituicao} (${edu.periodo})`
+            ).join('\n\n'),
+            habilidades: dadosCurriculo.habilidades.join(', ')
+        };
+
+        // Criar o conteúdo do arquivo
+        const content = `
+${cvData.nome}
+${dadosCurriculo.pessoal.titulo}
+
+Contato:
+${cvData.contato}
+
+Sobre:
+${dadosCurriculo.sobre}
+
+Experiência Profissional:
+${cvData.experiencias}
+
+Educação:
+${cvData.educacao}
+
+Habilidades:
+${cvData.habilidades}
+        `.trim();
+
+        // Criar e baixar o arquivo
+        const blob = new Blob([content], { type: 'text/plain' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${dadosCurriculo.pessoal.nome.replace(/\s+/g, '_')}_CV.txt`;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+    });
     // Carregar informações pessoais
     document.getElementById('nome').textContent = dadosCurriculo.pessoal.nome;
     document.getElementById('titulo').textContent = dadosCurriculo.pessoal.titulo;

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Currículo</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-info">
+                <h1 id="nome">Seu Nome</h1>
+                <p id="titulo">Desenvolvedor Full Stack</p>
+                <p id="contato">
+                    Email: seu.email@exemplo.com<br>
+                    Telefone: (00) 00000-0000<br>
+                    LinkedIn: linkedin.com/in/seuperfil<br>
+                    GitHub: github.com/seuperfil
+                </p>
+                <button id="download-cv" class="download-btn">Download CV</button>
+            </div>
+        </header>
+
+        <section id="sobre" class="section-collapsible">
+            <h2 class="section-header">Sobre <span class="toggle-icon">+</span></h2>
+            <div class="section-content">
+                <p id="descricao">Breve descrição sobre você e seus objetivos profissionais.</p>
+            </div>
+        </section>
+
+        <section id="experiencia" class="section-collapsible">
+            <h2 class="section-header">Experiência Profissional <span class="toggle-icon">+</span></h2>
+            <div class="section-content">
+                <div id="experiencias-lista">
+                    <!-- As experiências serão adicionadas via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="educacao" class="section-collapsible">
+            <h2 class="section-header">Educação <span class="toggle-icon">+</span></h2>
+            <div class="section-content">
+                <div id="educacao-lista">
+                    <!-- A educação será adicionada via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="section-collapsible">
+            <h2 class="section-header">Habilidades <span class="toggle-icon">+</span></h2>
+            <div class="section-content">
+                <div id="habilidades-lista">
+                    <!-- As habilidades serão adicionadas via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../js/dados.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
