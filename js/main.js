@@ -1,5 +1,52 @@
 // Função para carregar os dados do currículo
+// Função para gerenciar tema
+function initTheme() {
+    const themeSwitch = document.getElementById('theme-switch');
+    const html = document.documentElement;
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    
+    // Aplicar tema salvo
+    html.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+    
+    themeSwitch.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+}
+
+function updateThemeIcon(theme) {
+    const icon = document.querySelector('.theme-switch i');
+    if (icon) {
+        icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+    }
+}
+
+// Função para adicionar animações aos elementos
+function addAnimations() {
+    const sections = document.querySelectorAll('.section-content');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fadeIn 0.5s ease forwards';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar tema
+    initTheme();
+    
+    // Adicionar animações
+    addAnimations();
+    
     // Configurar seções colapsáveis
     const sections = document.querySelectorAll('.section-collapsible');
     sections.forEach(section => {
