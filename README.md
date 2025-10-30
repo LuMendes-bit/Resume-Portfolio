@@ -20,3 +20,4 @@ curriculo-githubPages/
 COMMITS:
 "create resume/portifolio" = Criando os primeiros arquivos do site.
 "updating structure" = Melhor organizaçõa da estrutura.
+"features add" = Adicionando navegaçõa de páginas
