@@ -10,6 +10,24 @@ const dadosCurriculo = {
         github: "github.com/seuperfil"
     },
 
+    // Projetos
+    projetos: [
+        {
+            titulo: "Portfolio Pessoal",
+            descricao: "Site portfolio responsivo desenvolvido com HTML, CSS e JavaScript, apresentando meus trabalhos e habilidades.",
+            tecnologias: ["HTML5", "CSS3", "JavaScript"],
+            demo: "https://exemplo.com/portfolio",
+            github: "https://github.com/seuperfil/portfolio"
+        },
+        {
+            titulo: "Sistema de Gestão",
+            descricao: "Aplicação web para gestão de tarefas e projetos, com autenticação de usuários e dashboard administrativo.",
+            tecnologias: ["React", "Node.js", "MongoDB"],
+            demo: "https://exemplo.com/gestao",
+            github: "https://github.com/seuperfil/gestao"
+        }
+    ],
+
     // Sobre você
     sobre: "Desenvolvedor apaixonado por tecnologia com experiência em desenvolvimento web full stack. Comprometido com a criação de soluções eficientes e escaláveis.",
 

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .projeto-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .projeto-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .projeto-titulo {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .projeto-descricao {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .tecnologias {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tecnologia {
+            background: #e9ecef;
+            color: #495057;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        .projeto-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .projeto-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .projeto-link:hover {
+            background: #2980b9;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .nav-link {
+            color: #3498db;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-menu">
+            <a href="curriculum.html" class="nav-link">Currículo</a>
+            <a href="projetos.html" class="nav-link">Projetos</a>
+            <a href="contato.html" class="nav-link">Contato</a>
+        </nav>
+
+        <h1 style="text-align: center; margin-bottom: 2rem;">Meus Projetos</h1>
+
+        <div id="projetos-container">
+            <!-- Projetos serão adicionados via JavaScript -->
+        </div>
+    </div>
+
+    <script src="../js/dados.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const projetos = dadosCurriculo.projetos || [
+                {
+                    titulo: "Portfolio Pessoal",
+                    descricao: "Site portfolio responsivo desenvolvido com HTML, CSS e JavaScript, apresentando meus trabalhos e habilidades.",
+                    tecnologias: ["HTML5", "CSS3", "JavaScript"],
+                    demo: "https://exemplo.com/portfolio",
+                    github: "https://github.com/seuperfil/portfolio"
+                },
+                {
+                    titulo: "Sistema de Gestão",
+                    descricao: "Aplicação web para gestão de tarefas e projetos, com autenticação de usuários e dashboard administrativo.",
+                    tecnologias: ["React", "Node.js", "MongoDB"],
+                    demo: "https://exemplo.com/gestao",
+                    github: "https://github.com/seuperfil/gestao"
+                }
+            ];
+
+            const projetosContainer = document.getElementById('projetos-container');
+            
+            projetos.forEach(projeto => {
+                const projetoElement = document.createElement('div');
+                projetoElement.className = 'projeto-card';
+                
+                const tecnologiasHtml = projeto.tecnologias
+                    .map(tech => `<span class="tecnologia">${tech}</span>`)
+                    .join('');
+
+                projetoElement.innerHTML = `
+                    <h2 class="projeto-titulo">${projeto.titulo}</h2>
+                    <p class="projeto-descricao">${projeto.descricao}</p>
+                    <div class="tecnologias">
+                        ${tecnologiasHtml}
+                    </div>
+                    <div class="projeto-links">
+                        <a href="${projeto.demo}" target="_blank" class="projeto-link">Demo</a>
+                        <a href="${projeto.github}" target="_blank" class="projeto-link">GitHub</a>
+                    </div>
+                `;
+                
+                projetosContainer.appendChild(projetoElement);
+            });
+        });
+    </script>
+</body>
+</html>

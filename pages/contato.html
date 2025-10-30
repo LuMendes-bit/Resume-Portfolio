@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+
+        .alert {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .nav-link {
+            color: #3498db;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-menu">
+            <a href="curriculum.html" class="nav-link">Currículo</a>
+            <a href="projetos.html" class="nav-link">Projetos</a>
+            <a href="contato.html" class="nav-link">Contato</a>
+        </nav>
+
+        <div class="form-container">
+            <h1 style="text-align: center; margin-bottom: 2rem;">Entre em Contato</h1>
+            
+            <div id="alertSuccess" class="alert alert-success">
+                Mensagem enviada com sucesso!
+            </div>
+            
+            <div id="alertError" class="alert alert-error">
+                Erro ao enviar mensagem. Tente novamente.
+            </div>
+
+            <form id="contactForm" onsubmit="return handleSubmit(event)">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" class="form-control" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = {
+                nome: document.getElementById('nome').value,
+                email: document.getElementById('email').value,
+                mensagem: document.getElementById('mensagem').value
+            };
+
+            // Aqui você pode adicionar a lógica para enviar o formulário
+            // Por exemplo, usando fetch para enviar para um servidor
+
+            // Simulando um envio bem-sucedido
+            const alertSuccess = document.getElementById('alertSuccess');
+            const alertError = document.getElementById('alertError');
+            
+            try {
+                // Simular envio
+                console.log('Dados do formulário:', formData);
+                
+                // Mostrar mensagem de sucesso
+                alertSuccess.style.display = 'block';
+                alertError.style.display = 'none';
+                
+                // Limpar formulário
+                document.getElementById('contactForm').reset();
+                
+                // Esconder mensagem de sucesso após 3 segundos
+                setTimeout(() => {
+                    alertSuccess.style.display = 'none';
+                }, 3000);
+                
+            } catch (error) {
+                // Mostrar mensagem de erro
+                alertError.style.display = 'block';
+                alertSuccess.style.display = 'none';
+                
+                // Esconder mensagem de erro após 3 segundos
+                setTimeout(() => {
+                    alertError.style.display = 'none';
+                }, 3000);
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>
