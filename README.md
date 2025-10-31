@@ -17,8 +17,3 @@ curriculo-githubPages/
 └── pages/
     └── curriculum.html (página principal do currículo)
 
-COMMITS:
-"create resume/portifolio" = Criando os primeiros arquivos do site.
-"updating structure" = Melhor organizaçõa da estrutura.
-"features add" = Adicionando navegaçõa de páginas.
-"Visual update" = Atualizaçõa do CSS.
