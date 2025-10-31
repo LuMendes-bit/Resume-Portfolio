@@ -1,7 +1,10 @@
 LUCAS MENDES DOS SANTOS
 
 TECNOLOGIAS ULTILIZADAS:
-IA(cloude sonet 3.5 no VScode).
+IA(cloude sonet 3.5 no VScode),
+HTML,
+JS,
+CSS
 
 DESCRIÇÃO DO PROJETO: 
 
