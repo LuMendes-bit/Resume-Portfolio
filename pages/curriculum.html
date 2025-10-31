@@ -23,14 +23,39 @@
                 <button id="theme-switch" class="theme-switch">
                     <i class="fas fa-moon"></i>
                 </button>
+                <div class="profile-photo">
+                    <div class="photo-container">
+                        <img id="profile-img" src="../assets/perfil-foto.jpg" alt="Foto de perfil">
+                        <label for="photo-upload" class="photo-upload-label">
+                            <i class="fas fa-camera"></i>
+                        </label>
+                        <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+                    </div>
+                </div>
                 <h1 id="nome">Seu Nome</h1>
                 <p id="titulo">Desenvolvedor Full Stack</p>
-                <p id="contato">
-                    <i class="fas fa-envelope contact-icon"></i><span class="contact-email">seu.email@exemplo.com</span><br>
-                    <i class="fas fa-phone contact-icon"></i><span class="contact-phone">(00) 00000-0000</span><br>
-                    <i class="fab fa-linkedin contact-icon"></i><span class="contact-linkedin">linkedin.com/in/seuperfil</span><br>
-                    <i class="fab fa-github contact-icon"></i><span class="contact-github">github.com/seuperfil</span>
-                </p>
+                <div id="contato" class="contact-info">
+                    <p class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <span class="contact-email">seu.email@exemplo.com</span>
+                    </p>
+                    <p class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <span class="contact-phone">(00) 00000-0000</span>
+                    </p>
+                    <p class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <span class="contact-location">Localização</span>
+                    </p>
+                    <div class="social-buttons">
+                        <a id="linkedin-btn" href="#" target="_blank" class="social-btn linkedin-btn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a id="github-btn" href="#" target="_blank" class="social-btn github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
                 <button id="download-cv" class="download-btn">
                     <i class="fas fa-download"></i> Download CV
                 </button>
@@ -73,6 +98,7 @@
     </div>
 
     <script src="../js/dados.js"></script>
+    <script src="../js/theme.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>

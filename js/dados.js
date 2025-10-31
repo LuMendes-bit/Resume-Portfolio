@@ -2,12 +2,13 @@
 const dadosCurriculo = {
     // Informações pessoais
     pessoal: {
-        nome: "Seu Nome",
-        titulo: "Desenvolvedor Full Stack",
-        email: "seu.email@exemplo.com",
-        telefone: "(00) 00000-0000",
-        linkedin: "linkedin.com/in/seuperfil",
-        github: "github.com/seuperfil"
+        nome: "Lucas M. Santos",
+        titulo: "Desenvolvedor junior",
+        email: "lucas.mendes.1234@hotmail.com",
+        telefone: "(16) 99760-1463",
+        localizacao: "Araraquara, SP - Brasil",
+        linkedin: "https://linkedin.com/in/seuperfil",
+        github: "https://github.com/LuMendes-bit"
     },
 
     // Projetos
@@ -15,45 +16,34 @@ const dadosCurriculo = {
         {
             titulo: "Portfolio Pessoal",
             descricao: "Site portfolio responsivo desenvolvido com HTML, CSS e JavaScript, apresentando meus trabalhos e habilidades.",
-            tecnologias: ["HTML5", "CSS3", "JavaScript"],
-            demo: "https://exemplo.com/portfolio",
-            github: "https://github.com/seuperfil/portfolio"
+            tecnologias: ["HTML5", "CSS3", "JavaScript","IAs"],
+            demo: "https://exemplo.com/Resume-Portfolio",
+            github: "https://github.com/LuMendes-bit/Resume-Portfolio"
         },
         {
             titulo: "Sistema de Gestão",
-            descricao: "Aplicação web para gestão de tarefas e projetos, com autenticação de usuários e dashboard administrativo.",
-            tecnologias: ["React", "Node.js", "MongoDB"],
-            demo: "https://exemplo.com/gestao",
-            github: "https://github.com/seuperfil/gestao"
+            descricao: "Participação em um projeto integrador do SENAC.( Em andamento) ",
+            tecnologias: ["Node.js","mySQL2","express","HTML5", "CSS3", "JavaScript","IAs"],
         }
     ],
 
     // Sobre você
-    sobre: "Desenvolvedor apaixonado por tecnologia com experiência em desenvolvimento web full stack. Comprometido com a criação de soluções eficientes e escaláveis.",
+    sobre: "Desenvolvedor apaixonado por tecnologia com experiência básica em desenvolvimento web full stack.",
 
     // Experiências profissionais
     experiencias: [
         {
-            cargo: "Desenvolvedor Full Stack Senior",
-            empresa: "Empresa XYZ",
-            periodo: "Jan 2022 - Presente",
-            descricao: "Desenvolvimento e manutenção de aplicações web utilizando React, Node.js e MongoDB."
+          experiencias: "Nenhuma experiencia profissional no momento"
         },
-        {
-            cargo: "Desenvolvedor Front-end",
-            empresa: "Empresa ABC",
-            periodo: "Jun 2020 - Dez 2021",
-            descricao: "Desenvolvimento de interfaces responsivas e otimização de performance."
-        }
     ],
 
     // Formação acadêmica
     educacao: [
         {
-            curso: "Bacharelado em Ciência da Computação",
-            instituicao: "Universidade XYZ",
-            periodo: "2016 - 2020",
-            descricao: "Foco em desenvolvimento de software e engenharia de sistemas."
+            curso: "Desenvolvimento Web e Desktop",
+            instituicao: "Senac",
+            periodo: "fev 2025 - Presente",
+            descricao: "Desenvolvimento e manutenção de aplicações web",
         }
     ],
 
@@ -62,11 +52,8 @@ const dadosCurriculo = {
         "JavaScript",
         "HTML5",
         "CSS3",
-        "React",
         "Node.js",
-        "Python",
-        "Git",
-        "SQL",
-        "MongoDB"
+        "Github",
+        "mySQL"
     ]
 };

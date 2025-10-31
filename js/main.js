@@ -40,9 +40,44 @@ function addAnimations() {
     sections.forEach(section => observer.observe(section));
 }
 
+// Função para gerenciar a foto do perfil
+function initProfilePhoto() {
+    const photoUpload = document.getElementById('photo-upload');
+    const profileImg = document.getElementById('profile-img');
+    
+    // Carregar foto salva ou usar a padrão
+    const savedPhoto = localStorage.getItem('profilePhoto');
+    if (savedPhoto) {
+        profileImg.src = savedPhoto;
+    } else {
+        profileImg.src = '../assets/perfil-foto.jpg';
+    }
+    
+    photoUpload.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                profileImg.src = event.target.result;
+                // Salvar no localStorage
+                localStorage.setItem('profilePhoto', event.target.result);
+            };
+            reader.onerror = function() {
+                console.error('Erro ao ler o arquivo');
+                // Em caso de erro, volta para a foto padrão
+                profileImg.src = '../assets/perfil-foto.jpg';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar tema
     initTheme();
+    
+    // Inicializar foto do perfil
+    initProfilePhoto();
     
     // Adicionar animações
     addAnimations();
@@ -106,12 +141,18 @@ ${cvData.habilidades}
     // Carregar informações pessoais
     document.getElementById('nome').textContent = dadosCurriculo.pessoal.nome;
     document.getElementById('titulo').textContent = dadosCurriculo.pessoal.titulo;
-    document.getElementById('contato').innerHTML = `
-        Email: ${dadosCurriculo.pessoal.email}<br>
-        Telefone: ${dadosCurriculo.pessoal.telefone}<br>
-        LinkedIn: ${dadosCurriculo.pessoal.linkedin}<br>
-        GitHub: ${dadosCurriculo.pessoal.github}
-    `;
+    
+    // Atualizar informações de contato
+    document.querySelector('.contact-email').textContent = dadosCurriculo.pessoal.email;
+    document.querySelector('.contact-phone').textContent = dadosCurriculo.pessoal.telefone;
+    document.querySelector('.contact-location').textContent = dadosCurriculo.pessoal.localizacao;
+    
+    // Configurar botões sociais
+    const linkedinBtn = document.getElementById('linkedin-btn');
+    const githubBtn = document.getElementById('github-btn');
+    
+    linkedinBtn.href = dadosCurriculo.pessoal.linkedin;
+    githubBtn.href = dadosCurriculo.pessoal.github;
 
     // Carregar seção sobre
     document.getElementById('descricao').textContent = dadosCurriculo.sobre;
