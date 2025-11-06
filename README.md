@@ -296,5 +296,6 @@ of this software and associated documentation files (the "Software")...
 **Feito com ❤️ e muito ☕**
 
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=seu-usuario.seu-repositorio)
-```
+
 </div>
+```
