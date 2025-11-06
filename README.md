@@ -137,10 +137,11 @@ python -m http.server 8000
 ```
 📦 portfolio-curriculo
 ├── 📄 index.html                 # Página principal (currículo)
-├── 📄 projetos.html             # Página de projetos
-├── 📄 contato.html              # Página de contato
-├── 📄 README.md                 # Este arquivo
-├── 📄 .nojekyll                 # Desabilita Jekyll no GitHub Pages
+├── 📄 README.md                  # Este arquivo
+│ 
+├── 📂 Pages/
+│   ├── 📄 projetos.html             # Página de projetos
+│   ├── 📄 contato.html              # Página de contato
 │
 ├── 📂 css/
 │   ├── 🎨 style.css             # Estilos globais
