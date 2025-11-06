@@ -289,10 +289,11 @@ of this software and associated documentation files (the "Software")...
 
 <div align="center">
 
+```
 ### ⭐ Se este projeto te ajudou, considere dar uma estrela!
 
 **Feito com ❤️ e muito ☕**
 
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=seu-usuario.seu-repositorio)
-
+```
 </div>
