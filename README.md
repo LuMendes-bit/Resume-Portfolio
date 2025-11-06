@@ -9,7 +9,7 @@
 
 **Um portfólio moderno, responsivo e elegante construído com tecnologias web fundamentais**
 
-[🌐 Ver Demo](https://seu-usuario.github.io/seu-repositorio) • [📝 Reportar Bug](https://github.com/seu-usuario/seu-repositorio/issues) • [✨ Solicitar Feature](https://github.com/seu-usuario/seu-repositorio/issues)
+[🌐 Ver Demo](https://seu-usuario.github.io/seu-repositorio) 
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
