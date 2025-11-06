@@ -29,7 +29,6 @@
 - [⚙️ Personalização](#️-personalização)
 - [🛠️ Tecnologias](#️-tecnologias)
 - [📱 Responsividade](#-responsividade)
-- [🤝 Contribuindo](#-contribuindo)
 - [📄 Licença](#-licença)
 - [📞 Contato](#-contato)
 
@@ -37,15 +36,7 @@
 
 ## ✨ Sobre o Projeto
 
-Este é um **portfólio pessoal completo** e **currículo digital interativo** desenvolvido com as melhores práticas de desenvolvimento web. O projeto foi criado para profissionais que desejam ter uma presença online marcante e profissional.
-
-### 🎯 Objetivos
-
-- 📱 **100% Responsivo** - Funciona perfeitamente em todos os dispositivos
-- 🎨 **Design Moderno** - Interface limpa e profissional
-- 🌓 **Tema Claro/Escuro** - Alternância suave entre temas
-- ⚡ **Performance** - Carregamento rápido e otimizado
-- ♿ **Acessível** - Seguindo padrões de acessibilidade web
+Este é um **portfólio pessoal ** e **currículo digital interativo** desenvolvido com as melhores práticas de desenvolvimento web.
 
 ---
 
@@ -279,38 +270,6 @@ O projeto é totalmente responsivo e foi testado em:
 @media (min-width: 768px)  { /* Tablet */ }
 @media (min-width: 1024px) { /* Desktop */ }
 @media (min-width: 1440px) { /* Large Desktop */ }
-```
-
----
-
-## 🤝 Contribuindo
-
-Contribuições são muito bem-vindas! Siga os passos abaixo:
-
-1. **Fork o projeto**
-2. **Crie uma branch** para sua feature
-   ```bash
-   git checkout -b feature/MinhaFeature
-   ```
-3. **Commit suas mudanças**
-   ```bash
-   git commit -m 'Adiciona nova feature incrível'
-   ```
-4. **Push para a branch**
-   ```bash
-   git push origin feature/MinhaFeature
-   ```
-5. **Abra um Pull Request**
-
-### 📝 Padrões de Commit
-
-- ✨ `feat:` Nova feature
-- 🐛 `fix:` Correção de bug
-- 📚 `docs:` Documentação
-- 💄 `style:` Formatação/estilo
-- ♻️ `refactor:` Refatoração
-- ⚡ `perf:` Performance
-- ✅ `test:` Testes
 
 ---
 
