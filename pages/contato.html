@@ -65,35 +65,25 @@
                 mensagem: document.getElementById('mensagem').value
             };
 
-            // Aqui você pode adicionar a lógica para enviar o formulário
-            // Por exemplo, usando fetch para enviar para um servidor
-
-            // Simulando um envio bem-sucedido
             const alertSuccess = document.getElementById('alertSuccess');
             const alertError = document.getElementById('alertError');
             
             try {
-                // Simular envio
                 console.log('Dados do formulário:', formData);
-                
-                // Mostrar mensagem de sucesso
+
                 alertSuccess.style.display = 'block';
                 alertError.style.display = 'none';
                 
-                // Limpar formulário
                 document.getElementById('contactForm').reset();
                 
-                // Esconder mensagem de sucesso após 3 segundos
                 setTimeout(() => {
                     alertSuccess.style.display = 'none';
                 }, 3000);
                 
             } catch (error) {
-                // Mostrar mensagem de erro
                 alertError.style.display = 'block';
                 alertSuccess.style.display = 'none';
                 
-                // Esconder mensagem de erro após 3 segundos
                 setTimeout(() => {
                     alertError.style.display = 'none';
                 }, 3000);

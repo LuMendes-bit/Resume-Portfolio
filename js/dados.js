@@ -1,6 +1,4 @@
-// Dados do currículo
 const dadosCurriculo = {
-    // Informações pessoais
     pessoal: {
         nome: "Lucas M. Santos",
         titulo: "Desenvolvedor junior",
@@ -11,7 +9,6 @@ const dadosCurriculo = {
         github: "https://github.com/LuMendes-bit"
     },
 
-    // Projetos
     projetos: [
         {
             titulo: "Portfolio Pessoal",
@@ -27,17 +24,14 @@ const dadosCurriculo = {
         }
     ],
 
-    // Sobre você
     sobre: "Desenvolvedor apaixonado por tecnologia com experiência básica em desenvolvimento web full stack.",
 
-    // Experiências profissionais
     experiencias: [
         {
           experiencias: "Nenhuma experiencia profissional no momento"
         },
     ],
 
-    // Formação acadêmica
     educacao: [
         {
             curso: "Desenvolvimento Web e Desktop",
@@ -47,7 +41,6 @@ const dadosCurriculo = {
         }
     ],
 
-    // Habilidades técnicas
     habilidades: [
         "JavaScript",
         "HTML5",
